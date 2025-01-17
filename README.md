@@ -1,7 +1,7 @@
 # self_libs
 
 
-## Instalation
+## Installation
 
 ```shell
 pip install git+https://github.com/nicolaepostica/self_libs.git 
