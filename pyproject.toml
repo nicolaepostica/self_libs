@@ -11,6 +11,9 @@ dependencies = [
 authors = [
     { name = "Nicolae Postica", email = "nicolae.postica2@gmail.com" },
 ]
+maintainers = [
+    { name = "Nicolae Postica", email = "nicolae.postica2@gmail.com" },
+]
 description = "Utils for parsing"
 readme = "README.md"
 requires-python = ">=3.0"
