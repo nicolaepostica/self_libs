@@ -1,5 +1,12 @@
 # self_libs
 
+
+## Instalation
+
+```shell
+pip install git+https://github.com/nicolaepostica/self_libs.git 
+```
+
 Utils for Parsing
 
 ```python
