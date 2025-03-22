@@ -6,14 +6,19 @@ import logging
 
 LOGGING_LEVEL = os.getenv("LOGGING_LEVEL", "INFO")
 
-logging.basicConfig(
-    level=getattr(logging, LOGGING_LEVEL),
-    format="%(asctime)s [%(levelname)-5.5s] - %(name)s:%(filename)s:%(lineno)d - %(message)s",
-    handlers=[logging.StreamHandler()],
-)
 
-logging.getLogger("requests").setLevel(logging.WARNING)
-logging.getLogger("urllib3").setLevel(logging.WARNING)
+def init_logger():
+    logging.basicConfig(
+        level=getattr(logging, LOGGING_LEVEL),
+        format="%(asctime)s [%(levelname)-5.5s] - %(name)s:%(filename)s:%(lineno)d - %(message)s",
+        handlers=[logging.StreamHandler()],
+    )
+
+    logging.getLogger("requests").setLevel(logging.WARNING)
+    logging.getLogger("urllib3").setLevel(logging.WARNING)
+
+
+init_logger()
 logger = logging.getLogger(__name__)
 
 headers = {
