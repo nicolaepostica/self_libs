@@ -1,1 +1,1 @@
-from common import logger, json_dump, json_load
+from .common import logger, json_dump, json_load
