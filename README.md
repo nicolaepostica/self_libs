@@ -1,22 +1,19 @@
 # self_libs
 
-
 ## Installation
 
 ```shell
-pip install git+https://github.com/nicolaepostica/self_libs.git 
+pip install git+https://github.com/nicolaepostica/self_libs.git
 ```
 
 Utils for Parsing
 
 ```python
-from sl.common import headers, json_dump, json_load
+from sl.common import json_dump, json_load
 
 data = {'name': 'python'}
 json_dump(data, "data.json")
 json_load("data.json")
-
-print(headers)
 ```
 
 ```python
