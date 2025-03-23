@@ -6,7 +6,6 @@ build-backend = "hatchling.build"
 name = "sl"
 version = "0.0.3"
 dependencies = [
-    "pyautogui",
 ]
 authors = [
     { name = "Nicolae Postica", email = "nicolae.postica2@gmail.com" },
