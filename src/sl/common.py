@@ -42,7 +42,7 @@ def json_dump(data: json, filename: str = "data.json", open_type: str = "w"):
         filename = filename.replace("/", "\\")
 
     if platform.system() != "Windows" and "/" in filename:
-        directory = re.search("((?:[a-zA-Z0-9_\-./]+\/)+)", filename).group()
+        directory = re.search("((?:[a-zA-Z0-9./])+)/", filename).group()
         if not os.path.exists(directory):
             os.makedirs(directory)
 
