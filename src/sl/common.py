@@ -35,14 +35,14 @@ def json_dump(data: json, filename: str = "data.json", open_type: str = "w"):
     :param filename: default="data.json"
     :param open_type: default="w", [w-write, a-append]
     """
-    if not re.match(".*\.json", filename):
+    if not re.match(".*.json$", filename):
         filename = f"{filename}.json"
 
     if platform.system() == "Windows":
         filename = filename.replace("/", "\\")
 
     if platform.system() != "Windows" and "/" in filename:
-        directory = re.search(".*\/", filename).group()
+        directory = re.search("((?:[a-zA-Z0-9_\-./]+\/)+)", filename).group()
         if not os.path.exists(directory):
             os.makedirs(directory)
 
@@ -59,7 +59,7 @@ def json_load(filename: str = "data.json", open_type: str = "r") -> json:
     if platform.system() == "Windows":
         filename = filename.replace("/", "\\")
 
-    if not re.match(".*\.json", filename):
+    if not re.match(".*.json$", filename):
         filename = f"{filename}.json"
 
     if not os.path.isfile(filename):
